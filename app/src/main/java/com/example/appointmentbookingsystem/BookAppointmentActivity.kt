@@ -59,10 +59,11 @@ class BookAppointmentActivity : AppCompatActivity() {
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        DatePickerDialog(this, { _, y, m, d ->
+        val datePicker = DatePickerDialog(this, R.style.DialogTheme, { _, y, m, d ->
             selectedDate = "$d/${m + 1}/$y"
             updateDateTimeDisplay()
-        }, year, month, day).show()
+        }, year, month, day)
+        datePicker.show()
     }
 
     private fun showTimePicker() {
@@ -70,15 +71,21 @@ class BookAppointmentActivity : AppCompatActivity() {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
 
-        TimePickerDialog(this, { _, h, m ->
-            selectedTime = String.format(Locale.getDefault(), "%02d:%02d", h, m)
+        // Using a more user-friendly TimePickerDialog with a Spinner style if supported or standard Material
+        val timePicker = TimePickerDialog(this, R.style.DialogTheme, { _, h, m ->
+            val amPm = if (h < 12) "AM" else "PM"
+            val hourOfDay = if (h % 12 == 0) 12 else h % 12
+            selectedTime = String.format(Locale.getDefault(), "%02d:%02d %s", hourOfDay, m, amPm)
             updateDateTimeDisplay()
-        }, hour, minute, true).show()
+        }, hour, minute, false)
+        timePicker.show()
     }
 
     private fun updateDateTimeDisplay() {
-        if (selectedDate.isNotEmpty() && selectedTime.isNotEmpty()) {
-            tvSelectedDateTime.text = getString(R.string.selected_date_time, selectedDate, selectedTime)
+        if (selectedDate.isNotEmpty() || selectedTime.isNotEmpty()) {
+            val datePart = if (selectedDate.isNotEmpty()) selectedDate else "Not set"
+            val timePart = if (selectedTime.isNotEmpty()) selectedTime else "Not set"
+            tvSelectedDateTime.text = getString(R.string.selected_date_time, datePart, timePart)
         }
     }
 

@@ -2,12 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primaryColor">#2196F3</color>
-    <color name="primaryVariant">#1976D2</color>
-    <color name="secondaryColor">#00BCD4</color>
-    <color name="backgroundColor">#F5F5F5</color>
-    <color name="textColorPrimary">#212121</color>
-    <color name="textColorSecondary">#757575</color>
-    <color name="errorColor">#D32F2F</color>
-    <color name="successColor">#388E3C</color>
+    <color name="primaryColor">#1A237E</color> <!-- Navy Blue -->
+    <color name="primaryVariant">#121858</color>
+    <color name="secondaryColor">#7B1FA2</color> <!-- Purple -->
+    <color name="secondaryVariant">#4A148C</color>
+    <color name="backgroundColor">#F8F9FF</color> <!-- Very light blue-ish white -->
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="textColorPrimary">#1A237E</color> <!-- Using Navy for text titles -->
+    <color name="textColorSecondary">#5C6BC0</color> <!-- Indigo for secondary text -->
+    <color name="errorColor">#B00020</color>
+    <color name="successColor">#4CAF50</color>
+
+    <!-- Gradient Colors for Splash/Buttons if needed -->
+    <color name="gradient_start">#1A237E</color>
+    <color name="gradient_end">#7B1FA2</color>
 </resources>
