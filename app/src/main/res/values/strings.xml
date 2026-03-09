@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Smart Appointment Booking</string>
+    <string name="welcome_splash">Welcome to the Appointment Booking App</string>
+    <string name="welcome_main">Welcome to Smart Appointment</string>
+    <string name="app_description">Book your appointments with ease and efficiency. We provide top-notch medical services tailored to your needs.</string>
+    <string name="btn_book_now">Book Appointment</string>
+
+    <string name="title_book_appointment">Book Your Appointment</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_email">Email Address</string>
+    <string name="prompt_appointment_type">Select Appointment Type</string>
+    <string name="btn_select_date">Select Date</string>
+    <string name="btn_select_time">Select Time</string>
+    <string name="selected_date_time">Selected: %1$s %2$s</string>
+    <string name="date_time_not_selected">Date and Time not selected</string>
+    <string name="label_select_gender">Select Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+    <string name="terms_condition">I accept the Terms and Conditions</string>
+    <string name="btn_confirm">Confirm Booking</string>
+
+    <string name="confirm_title">Booking Confirmation</string>
+    <string name="label_name">Name: %1$s</string>
+    <string name="label_phone">Phone: %1$s</string>
+    <string name="label_email">Email: %1$s</string>
+    <string name="label_type">Type: %1$s</string>
+    <string name="label_date">Date: %1$s</string>
+    <string name="label_time">Time: %1$s</string>
+    <string name="label_gender">Gender: %1$s</string>
+    <string name="btn_back_home">Back to Home</string>
+
+    <string name="err_empty_name">Name cannot be empty</string>
+    <string name="err_empty_phone">Phone cannot be empty</string>
+    <string name="err_empty_email">Email cannot be empty</string>
+    <string name="err_terms">Please accept terms and conditions</string>
+    <string name="err_date_time">Please select Date and Time</string>
+    <string name="err_gender">Please select Gender</string>
+
+    <string-array name="appointment_types">
+        <item>Doctor Consultation</item>
+        <item>Dentist Appointment</item>
+        <item>Eye Specialist</item>
+        <item>Skin Specialist</item>
+        <item>General Checkup</item>
+    </string-array>
+</resources>
